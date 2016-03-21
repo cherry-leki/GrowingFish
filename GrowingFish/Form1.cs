@@ -19,7 +19,9 @@ namespace GrowingFish
         //Image buffImage;
 
         Bitmap background;
-        Graphics buffg;
+        BufferedGraphicsContext currentContext;
+        BufferedGraphics myBuffer;
+
         MainCharacter mainCharacter;
         ManagerEnemys managerEnemys;
 
@@ -30,7 +32,6 @@ namespace GrowingFish
             InitializeComponent();
 
             background = new Bitmap("./pictures/FishBackground.png");
-            buffg = this.CreateGraphics();
 
             counter = 0;
             gameScore = 0;
@@ -41,27 +42,25 @@ namespace GrowingFish
 
         public void run()
         {
-            MessageBox.Show("dd");
-
+            this.Refresh();
             while (true)
             {
-                Thread.Sleep(5);
                 counter++;
 
-                Console.WriteLine("Time : " + counter);
-                Invalidate();
+                Thread.Sleep(1);
+                this.Refresh();
             }
         }
 
         public void drawBackground()
         {
-            buffg.DrawImage(background, 0, 0, ClientRectangle.Width, ClientRectangle.Height);
-            buffg.DrawString(counter.ToString(), new Font("Arial", 16), new System.Drawing.SolidBrush(System.Drawing.Color.Black), 10, 10);
+            myBuffer.Graphics.DrawImage(background, 0, 0, ClientRectangle.Width, ClientRectangle.Height);
+            myBuffer.Graphics.DrawString(counter.ToString(), new Font("Arial", 16), new System.Drawing.SolidBrush(System.Drawing.Color.Black), 10, 10);
         }
 
         public void drawFish()
         {
-            
+
         }
 
         public void EnemyRight()
@@ -79,17 +78,25 @@ namespace GrowingFish
 
         }
 
-        public bool Crash()
+        public bool Crash(double mainX, double mainY, double enemyX, double enemyY, double enemyWidth, double enemyHeight)
         {
+            bool check;
+
+
             return true;
         }
 
-        // ClientRectangle.Width = 
-        // ClientRectangle.Heigt = 
-        private void Form1_Paint(object sender, PaintEventArgs e)
+        protected override void OnPaintBackground(PaintEventArgs e) { }
+        protected override void OnPaint(PaintEventArgs e)
         {
+            currentContext = BufferedGraphicsManager.Current;
+            myBuffer = currentContext.Allocate(this.CreateGraphics(), new Rectangle(0, 0, ClientRectangle.Width, ClientRectangle.Height));
+            // 이 사이에 값을 넣어 더블 버퍼링으로 사용.
             drawBackground();
 
+            // 이 사이에 값을 넣어 더블 버퍼링으로 사용.
+            myBuffer.Render(e.Graphics);
+            myBuffer.Dispose();
         }
     }
 }

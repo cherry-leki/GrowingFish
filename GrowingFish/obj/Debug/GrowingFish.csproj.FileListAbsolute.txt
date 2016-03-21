@@ -7,3 +7,6 @@ C:\Users\염광호\documents\visual studio 2015\Projects\GrowingFish\GrowingFish
 C:\Users\염광호\documents\visual studio 2015\Projects\GrowingFish\GrowingFish\obj\Debug\GrowingFish.csproj.GenerateResource.Cache
 C:\Users\염광호\documents\visual studio 2015\Projects\GrowingFish\GrowingFish\obj\Debug\GrowingFish.exe
 C:\Users\염광호\documents\visual studio 2015\Projects\GrowingFish\GrowingFish\obj\Debug\GrowingFish.pdb
+C:\Users\염광호\GrowingFish\GrowingFish\bin\Debug\GrowingFish.exe.config
+C:\Users\염광호\GrowingFish\GrowingFish\obj\Debug\GrowingFish.exe
+C:\Users\염광호\GrowingFish\GrowingFish\obj\Debug\GrowingFish.pdb

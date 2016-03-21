@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowingFish", "GrowingFish\GrowingFish.csproj", "{122C7AF1-C3E1-4D92-9520-B64601D3AD91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrowingFishPrivate", "..\Documents\Visual Studio 2015\Projects\GrowingFish\GrowingFish\GrowingFishPrivate.csproj", "{0F571E0F-377B-41F1-80BE-C19EAC226A29}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{122C7AF1-C3E1-4D92-9520-B64601D3AD91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{122C7AF1-C3E1-4D92-9520-B64601D3AD91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{122C7AF1-C3E1-4D92-9520-B64601D3AD91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F571E0F-377B-41F1-80BE-C19EAC226A29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F571E0F-377B-41F1-80BE-C19EAC226A29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F571E0F-377B-41F1-80BE-C19EAC226A29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F571E0F-377B-41F1-80BE-C19EAC226A29}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
